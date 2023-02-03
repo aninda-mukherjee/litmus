@@ -1,6 +1,6 @@
 ---
 spec_version: '1.0'
 indicators:
-  # probe_duration_ms: avg_over_time(probe_duration_seconds{instance="$SERVICE.$PROJECT-$STAGE.svc.cluster.local:80",job="blackbox"}[$DURATION_SECONDS:1s])*1000
-  # probe_success_percentage: avg_over_time(probe_success{instance="$SERVICE.$PROJECT-$STAGE.svc.cluster.local:80",job="blackbox"}[$DURATION_SECONDS:1s])*100
-  cpu_usage: avg(rate(container_cpu_usage_seconds_total{instance="ip-172-17-131-172.us-west-2.compute.internal",job="kubernetes-cadvisor"}[5m]))
+  probe_duration_ms: avg_over_time(probe_duration_seconds{instance="$SERVICE.$PROJECT-$STAGE.svc.cluster.local:80",job="blackbox"}[$DURATION_SECONDS:1s])*1000
+  probe_success_percentage: avg_over_time(probe_success{instance="$SERVICE.$PROJECT-$STAGE.svc.cluster.local:80",job="blackbox"}[$DURATION_SECONDS:1s])*100
+  # cpu_usage: avg(rate(container_cpu_usage_seconds_total{instance="ip-172-17-131-172.us-west-2.compute.internal",job="kubernetes-cadvisor"}[5m]))
